@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Página incial</title>
+</head>
+<body>
+
+	<h3> Olá <span th:text="${facebookProfile.name}"></span></h3>
+	
+	<table>
+		<tr th:each="post:${feed}">
+			<td th:text="${post.from.name}">
+				
+			</td>
+			<td th:text="${post.message}">
+				
+			</td>
+			<td >
+				<img th:if="${post.picture}" th:src="${post.picture}" />
+			</td>
+		</tr>
+	
+	</table>
+
+</body>
+</html>
